@@ -1,0 +1,57 @@
+.guaranty {
+    padding-top: 26px;
+}
+
+.guaranty__background {
+    background-color: rgb(241, 241, 241);
+}
+
+.section-title--guaranty {
+    margin-bottom: 20px;
+}
+
+.guaranty__list {
+    position: relative;
+    padding: 24px 0 24px 0;
+}
+
+.guaranty__list::before {
+    display: block;
+    content: "";
+    border-left: 1px dotted rgb(186, 186, 186);
+    height: 330px;
+    position: absolute;
+    left: 6px;
+    top: 28px;
+}
+
+.guaranty__list-item {
+    width: 275px;
+    font-size: 11px;
+    font-family: 'Montserrat500';
+    color: rgb(24, 25, 29);
+    line-height: 20px;
+    letter-spacing: 0.55px;
+    padding-left: 36px;
+    position: relative;
+}
+
+.guaranty__list-item:not(:last-of-type) {
+    margin-bottom: 26px;
+}
+
+.guaranty__list-item::before {
+    display: block;
+    content: "";
+    background-image: url("../images/icon-fire.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+}
+
+.guaranty__list-item span {
+    color: rgb(255, 107, 8);
+}

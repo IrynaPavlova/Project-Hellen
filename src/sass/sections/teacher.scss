@@ -1,0 +1,100 @@
+.teacher {
+    padding: 244px 0 26px 0;
+}
+
+.teacher__name {
+    font-size: 16px;
+    font-family: 'Montserrat800';
+    color: rgb(17, 21, 23);
+    line-height: 29px;
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+}
+
+.teacher__name::after {
+    display: block;
+    content: "";
+    background-color: rgba(133, 133, 133, 0.4);
+    width: 280px;
+    height: 1px;
+}
+
+.teacher__skills-list {
+    margin-bottom: 20px;
+}
+
+.teacher__skills-list-item {
+    font-size: 13px;
+    font-family: 'Montserrat700';
+    color: rgb(17, 21, 23);
+    line-height: 20px;
+    /*!!!!!!!*/
+    letter-spacing: 0.65px;
+    padding-left: 34px;
+    position: relative;
+}
+
+.teacher__skills-list-item:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.teacher__skills-list-item::before {
+    display: block;
+    content: "";
+    background-image: url("../images/icon-Check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.teacher__description {
+    font-size: 11px;
+    font-family: 'Montserrat400';
+    color: rgb(133, 133, 133);
+    line-height: 20px;
+    letter-spacing: 0.55px;
+}
+
+.teacher__description--one::before {
+    display: block;
+    content: "";
+    background-color: rgb(255, 107, 8);
+    width: 25px;
+    height: 2px;
+    margin-bottom: 16px;
+}
+
+.teacher__description--one {
+    margin-bottom: 20px;
+}
+
+.teacher__description--two {
+    margin-bottom: 20px;
+}
+
+.teacher__description--three {
+    margin-bottom: 12px;
+}
+
+.teacher__link {
+    font-size: 11px;
+    font-family: 'Montserrat400';
+    color: rgb(255, 107, 8);
+    text-decoration: underline;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.55px;
+}
+
+@media (min-width: 768px) {
+    .container {  
+        width: 720px;
+        padding: 0 16px;
+    }
+
+    
+}
