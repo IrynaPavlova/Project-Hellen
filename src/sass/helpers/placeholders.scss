@@ -1,16 +1,9 @@
-%bg-image {
+  %bg-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
-  %primary-font-settings {
-    font-size: 14px;
-    line-height: 17px;
-  }
-  %secondary-font-settings {
-    font-size: 15px;
-    line-height: 24px;
-  }
+ 
   %flex-align {
     display: flex;
     align-items: center;
@@ -26,11 +19,13 @@
     display: flex;
     justify-content: space-between;
   }
+
   %flex-center-between {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   %pseudo {
     display: block;
     content: '';
