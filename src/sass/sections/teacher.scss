@@ -48,6 +48,10 @@
                 left: 0;
                 top: 4px;
             }
+
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -83,14 +87,9 @@
     }
 }
 
-.teacher__skills-list-item:not(:last-of-type) {
-    margin-bottom: 20px;
-}
-
 @media (min-width: 768px) {
     .container {  
-        width: 720px;
-        padding: 0 16px;
+        width: 688px;
     }
 
     .section-title--teacher {
@@ -139,7 +138,6 @@
 @media (min-width: 1280px) {
     .container {
        width: 1210px;
-       padding: 0;
     }
 
     .teacher {
@@ -201,9 +199,5 @@
         &-text {
             width: 632px;
         }
-    }
-
-    .teacher__skills-list-item:not(:last-of-type) {
-        margin-bottom: 20px;
-    }    
+    }  
 }
