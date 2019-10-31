@@ -461,6 +461,12 @@ ul {
   background-position: center;
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .program__list-item-term::before,
 .program__list-item-list-description-class::before,
 .program__list::before,
@@ -572,101 +578,6 @@ input[type="radio"].visually-hidden {
   color: #ff6b08;
 }
 
-/*.consultation__logo {
-    font-size: 15px;
-    font-family: 'Montserrat800';
-    color: #000000;
-    width: 80px;
-    margin: 0 auto;
-    text-align: center;
-    &-fire {
-      fill: #FF6B08;
-      width: 17px;
-      height: 22px;
-    }
-    &-en {
-      font-size: 15px;
-      font-family: 'Montserrat800';
-      color: #000000;
-      text-transform: uppercase;
-    }
-    &-description {
-      display: block;
-      font-size: 5.3px;
-      font-family: 'Montserrat700';
-      color: #FF6B08;
-      text-transform: uppercase;
-    }
-  }
-
-  .consultation__logo-description span {
-    color: #000000;
-  }*/
-
-@-webkit-keyframes logo-appear {
-  from {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-}
-
-@keyframes logo-appear {
-  from {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-}
-
 .header {
   padding: 30px 0 0;
   margin-bottom: 56px;
@@ -717,6 +628,7 @@ input[type="radio"].visually-hidden {
   font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 36px;
+  width: 80%;
 }
 
 .header-section__title-text {
@@ -725,18 +637,16 @@ input[type="radio"].visually-hidden {
   color: #b9b9b9;
 }
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .header-section__description span {
   color: #ff6b08;
 }
 
 .services {
-  padding: 0 20px 54px;
+  padding-bottom: 54px;
+}
+
+.services__list {
+  padding-left: 88px;
 }
 
 .services__list-item {
@@ -744,13 +654,13 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 20px;
   display: block;
-  width: 130px;
-  margin-left: 120px;
+  width: 132px;
+  margin: auto;
   position: relative;
 }
 
-.services :not(:first-child) {
-  margin-top: 32px;
+.services__list-item:not(:last-of-type) {
+  margin-bottom: 32px;
 }
 
 .student::before {
@@ -797,7 +707,7 @@ input[type="radio"].visually-hidden {
 }
 
 .section-title {
-  font-family: 'Montserrat800';
+  font-family: "Montserrat800";
   font-size: 20px;
   line-height: 30px;
 }
@@ -823,7 +733,7 @@ input[type="radio"].visually-hidden {
 }
 
 .section-subtitle {
-  font-family: 'Montserrat700';
+  font-family: "Montserrat700";
   font-size: 13px;
   line-height: 20px;
   color: #18191d;
@@ -849,7 +759,7 @@ input[type="radio"].visually-hidden {
   display: block;
   padding-left: 36px;
   color: #ff6b08;
-  font-family: 'Montserrat400';
+  font-family: "Montserrat400";
   font-size: 14px;
   margin-bottom: 6px;
 }
@@ -870,13 +780,13 @@ input[type="radio"].visually-hidden {
 }
 
 .section-title {
-  font-family: 'Montserrat800';
+  font-family: "Montserrat800";
   font-size: 20px;
   line-height: 30px;
 }
 
 .section-subtitle {
-  font-family: 'Montserrat700';
+  font-family: "Montserrat700";
   font-size: 13px;
   line-height: 20px;
   color: #18191d;
@@ -902,7 +812,7 @@ input[type="radio"].visually-hidden {
 .section-subtitle--features {
   width: 83%;
   margin: auto;
-  font-family: 'Montserrat700';
+  font-family: "Montserrat700";
   color: #111517;
   text-align: center;
   margin-bottom: 40px;
@@ -910,7 +820,7 @@ input[type="radio"].visually-hidden {
 }
 
 .features-list_description {
-  font-family: 'Montserrat400';
+  font-family: "Montserrat400";
   font-size: 11px;
   line-height: 20px;
   color: #858585;
@@ -1730,26 +1640,22 @@ input[type="radio"].visually-hidden {
   }
 
   .services {
-    padding: 20px 0 50px 0;
-    margin: 0 auto;
+    padding-bottom: 52px;
   }
 
   .services__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 67px;
   }
 
   .services__list-item {
-    margin-left: 66px;
-  }
-
-  .services :not(:first-child) {
-    margin-top: 0;
+    margin: 0;
   }
 
   .services__list-item:not(:last-of-type) {
-    margin-right: 42px;
+    margin-bottom: 0;
   }
 
   .container {
@@ -2296,7 +2202,6 @@ input[type="radio"].visually-hidden {
     width: 300px;
     height: 68px;
     font-size: 14px;
-    margin-top: 32px;
   }
 
   .header-section::after {
@@ -2304,8 +2209,11 @@ input[type="radio"].visually-hidden {
   }
 
   .services {
-    margin-top: 126px;
-    margin-bottom: 116px;
+    padding: 40px 0 84px;
+  }
+
+  .services__list {
+    padding-left: 85px;
   }
 
   .services__list-item {
@@ -2425,7 +2333,7 @@ input[type="radio"].visually-hidden {
   .section-subtitle {
     font-size: 18px;
     line-height: 30px;
-    font-family: 'Montserrat700';
+    font-family: "Montserrat700";
   }
 
   .section-title--features {

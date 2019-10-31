@@ -4,18 +4,18 @@
     padding: 204px 0 52px 0;
  }
  .section-title {
-    font-family: 'Montserrat800';
+    font-family: $norm800;
     font-size: 20px;
     line-height: 30px;
  }
  .section-subtitle {
-    font-family: 'Montserrat700';
+    font-family: $norm700;
     font-size: 13px;
     line-height: 20px;
-    color: #18191d;
+    color: $primary-dark-color;
  }
  .section-title--features {
-    color: #18191d;
+    color: $primary-dark-color;
     text-align: center;
     margin-bottom: 36px;
  }
@@ -31,17 +31,17 @@
  .section-subtitle--features {
     width: 83%;
     margin: auto;
-    font-family: 'Montserrat700';
-    color: rgb(17, 21, 23);
+    font-family: $norm700;
+    color: $secondary-dark-color;
     text-align: center;
     margin-bottom: 40px;
     position: relative;
  }
  .features-list_description {
-    font-family: 'Montserrat400';
+    font-family: $norm400;
     font-size: 11px;
     line-height: 20px;
-    color: #858585;
+    color: $secondary-grey-color;
     text-align: center;
  }
  .section-subtitle--features::after {
@@ -49,13 +49,13 @@
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #ff6b08;
+    background-color: $main-orange-color;
     position: absolute;
     left: 45%;
     top: 145%;
  }
  .icon-features {
-    fill: #ff6b08;
+    fill: $main-orange-color;
     position: absolute;
     width: 45px;
     height: 45px;
@@ -68,19 +68,19 @@
     left: 38%;
  }
  .features-list_item:hover {
-    background-color: #ff6b08;
+    background-color: $main-orange-color;
  }
  .features-list_item:hover .section-subtitle--features {
-    color: #ffffff;
+    color: $primary-light-color;
  }
  .features-list_item:hover .icon-features {
-    fill: #ffffff;
+    fill: $primary-light-color;
  }
  .features-list_item:hover .section-subtitle--features::after {
-    background-color: #ffffff;
+    background-color: $primary-light-color;
  }
  .features-list_item:hover .features-list_description {
-    color: #ffffff;
+    color: $primary-light-color;
  }
  @media (min-width: 768px) {
     .container {
@@ -132,7 +132,7 @@
     .section-subtitle {
         font-size: 18px;
         line-height: 30px;
-        font-family: 'Montserrat700'
+        font-family: $norm700;
     }
     .section-title--features {
         font-size: 42px;

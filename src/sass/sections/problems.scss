@@ -3,22 +3,22 @@
   position: relative;
   padding-top: 46px;
   padding-bottom: 334px;
-  background-color: #111517;
+  background-color: $secondary-dark-color;
 }
 
 .section-title {
-  font-family: 'Montserrat800';
+  font-family: $norm800;
   font-size: 20px;
   line-height: 30px;
 }
 
 .section-title--problems {
-  color: #ffffff;
+  color: $primary-light-color;
   width: 236px;
   text-align: left;
 }
 .colortext {
-  color: #ff6b08;
+  color: $main-orange-color;
 }
 .problems-list {
   counter-reset: issues 0;
@@ -26,14 +26,14 @@
   bottom: -3%;
   left: 50%;
   transform: translate(-50%, 30%);
-  background-color: #ffffff;
+  background-color: $primary-light-color;
   padding: 20px 20px 32px 26px;
 }
 .section-subtitle {
-  font-family: 'Montserrat700';
+  font-family: $norm700;
   font-size: 13px;
   line-height: 20px;
-  color: #18191d;
+  color: $primary-dark-color;
 }
 .problems-list {
   width: 280px;
@@ -51,8 +51,8 @@
   content: '' counter(issues, decimal-leading-zero);
   display: block;
   padding-left: 36px;
-  color: #ff6b08;
-  font-family: 'Montserrat400';
+  color: $main-orange-color;
+  font-family: $norm400;
   font-size: 14px;
   margin-bottom: 6px;
 }
@@ -61,7 +61,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background-color: #ff6b08;
+  background-color: $main-orange-color;
   position: absolute;
   top: 6px;
   left: 0;
