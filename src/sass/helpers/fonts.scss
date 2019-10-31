@@ -42,3 +42,12 @@
          url('../fonts/montserrat-v14-cyrillic_latin-800.woff2') format('woff2'),
          url('../fonts/montserrat-v14-cyrillic_latin-800.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), local(''),
+    url('../../fonts/Tahoma-Bold.woff2') format('woff2'),
+    url('../../fonts/Tahoma-Bold.woff') format('woff');
+}

@@ -410,6 +410,13 @@ template {
   src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"), url("../fonts/montserrat-v14-cyrillic_latin-800.woff2") format("woff2"), url("../fonts/montserrat-v14-cyrillic_latin-800.woff") format("woff");
 }
 
+@font-face {
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), local(""), url("../../fonts/Tahoma-Bold.woff2") format("woff2"), url("../../fonts/Tahoma-Bold.woff") format("woff");
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -447,7 +454,8 @@ ul {
 }
 
 .teacher__skills-list-item::before,
-.guaranty__list-item::before {
+.guaranty__list-item::before,
+.registration {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1270,6 +1278,396 @@ input[type="radio"].visually-hidden {
   margin-bottom: 26px;
 }
 
+.reviews {
+  margin: 0 auto;
+}
+
+.reviews-wrap {
+  margin: 0 auto;
+}
+
+.reviews .container {
+  position: relative;
+}
+
+.reviews-title {
+  font-size: 20px;
+  font-family: "Montserrat700";
+  color: #111517;
+  line-height: 1.327;
+  padding: 46px 50px 0;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.reviews__card-student {
+  width: 280px;
+  padding: 0 28px 0;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 4px 6.928px 34.96px 11.04px #1d1d1b17;
+  margin: 0 auto;
+}
+
+.reviews__card-student-photo {
+  padding-top: 22px;
+  margin: 0 auto;
+  padding-bottom: 16px;
+  width: 80px;
+}
+
+.reviews__card-student-photo-desktop {
+  display: none;
+}
+
+.reviews__card-student-social {
+  width: 220px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.reviews__card-student-name {
+  font-size: 13px;
+  font-family: "Montserrat700";
+  color: #ff6b08;
+  line-height: 2.244;
+  text-align: center;
+}
+
+.reviews__card-student-learned {
+  font-size: 11px;
+  font-family: "Montserrat500";
+  color: #858585;
+  line-height: 1.515;
+  text-align: center;
+  width: 225px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.reviews__card-student-message {
+  font-size: 11px;
+  font-family: "Montserrat500";
+  color: #18191d;
+  line-height: 1.818;
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.reviews__card-student-message-continuation {
+  display: none;
+}
+
+.reviews__card-student-message-link {
+  display: inline;
+  text-decoration: underline;
+  color: #ff6b08;
+}
+
+.arrows {
+  width: 270px;
+  margin: 0 auto;
+  padding: 44px 0 80px;
+}
+
+.arrows__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.left-arrows-reviews {
+  position: relative;
+  margin: 0 auto;
+}
+
+.left-arrows-reviews::before,
+.left-arrows-reviews::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right: 0;
+}
+
+.left-arrows-reviews {
+  width: 16px;
+  height: 2px;
+  background-color: #ff6b08;
+}
+
+.left-arrows-reviews::after {
+  top: -2px;
+  right: -5px;
+  border-left-color: #ff6b08;
+  border-width: 3px 0 3px 8px;
+}
+
+.right-arrows-reviews {
+  position: relative;
+  margin: 0 auto;
+}
+
+.right-arrows-reviews::before,
+.right-arrows-reviews::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left: 0;
+}
+
+.right-arrows-reviews {
+  width: 16px;
+  height: 2px;
+  background-color: #ff6b08;
+}
+
+.right-arrows-reviews::after {
+  top: -2px;
+  right: 13px;
+  border-right-color: #ff6b08;
+  border-width: 3px 8px 3px 0;
+}
+
+.reviews__cards-title {
+  width: 184px;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 54px;
+  right: 50px;
+}
+
+.reviews__cards-title-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews__cards-title-list-student {
+  width: 54px;
+}
+
+.reviews__cards-title-list-student:hover,
+.reviews__cards-title-list-student:focus {
+  border: 2px solid #ff6b08;
+  border-radius: 50%;
+}
+
+.registration {
+  background-image: url(../images/bg_registration.png);
+  opacity: 0.9;
+}
+
+.registration__title {
+  font-size: 14px;
+  font-family: "Montserrat700";
+  color: #ffffff;
+  line-height: 1.86;
+  text-align: center;
+  width: 230px;
+  padding-top: 48px;
+  margin: 0 auto 16px;
+}
+
+.registration__title span {
+  color: #ff6b08;
+}
+
+.registration__description {
+  font-size: 11px;
+  font-family: "Montserrat600";
+  line-height: 1.818;
+  text-align: center;
+  color: #ffffff;
+  width: 235px;
+  margin: 0 auto 24px;
+}
+
+.registration__description-color {
+  color: #ff6b08;
+}
+
+.wrap_form {
+  padding-bottom: 58px;
+}
+
+.registration__form {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.registration__form-name,
+.registration__form-tel {
+  background-color: transparent;
+  font-family: "Montserrat400";
+  font-size: 13px;
+  line-height: 2.885;
+  letter-spacing: 1.43px;
+  border: 1px solid #ffffff;
+  width: 280px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  padding-left: 22px;
+}
+
+.registration__form-name::-webkit-input-placeholder,
+.registration__form-tel::-webkit-input-placeholder {
+  color: #ffffff;
+  font-family: "Montserrat600";
+}
+
+.registration__form-name::-moz-placeholder,
+.registration__form-tel::-moz-placeholder {
+  color: #ffffff;
+  font-family: "Montserrat600";
+}
+
+.registration__form-name:-ms-input-placeholder,
+.registration__form-tel:-ms-input-placeholder {
+  color: #ffffff;
+  font-family: "Montserrat600";
+}
+
+.registration__form-name::-ms-input-placeholder,
+.registration__form-tel::-ms-input-placeholder {
+  color: #ffffff;
+  font-family: "Montserrat600";
+}
+
+.registration__form-name::placeholder,
+.registration__form-tel::placeholder {
+  color: #ffffff;
+  font-family: "Montserrat600";
+}
+
+.registration__form-btn {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 250px;
+  font-size: 12px;
+  line-height: 4.2;
+  letter-spacing: 0.9px;
+  font-family: "Tahoma";
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ff6b08;
+  border: none;
+  cursor: pointer;
+}
+
+.registration__form-btn:hover,
+.registration__form-btn:focus {
+  background-color: #d35526;
+  transition: all 0.2s linear;
+}
+
+.registration__form-tel {
+  margin-bottom: 55px;
+}
+
+.registration__form button {
+  margin: 0 auto;
+}
+
+.consultation {
+  margin-bottom: 14px;
+}
+
+.consultation__phone {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-top: 34px;
+  margin-bottom: 20px;
+}
+
+.consultation__phone-svg {
+  width: 20px;
+  height: 20px;
+  margin: auto 0 8px;
+}
+
+.consultation__phone a {
+  font-size: 18px;
+  line-height: 1.875;
+  font-family: "Montserrat600";
+  color: black;
+  margin-left: 8px;
+}
+
+.consultation__instagram {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.consultation__instagram-svg {
+  width: 37px;
+  height: 37px;
+  margin: 0 auto;
+}
+
+.consultation__logo {
+  font-size: 15px;
+  font-family: "Montserrat800";
+  color: #000000;
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.consultation__logo-fire {
+  fill: #ff6b08;
+  width: 17px;
+  height: 22px;
+}
+
+.consultation__logo-fire-tablet {
+  display: none;
+}
+
+.consultation__logo-en {
+  font-size: 15px;
+  font-family: "Montserrat800";
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.consultation__logo-description {
+  display: block;
+  font-size: 5.3px;
+  font-family: "Montserrat700";
+  color: #ff6b08;
+  text-transform: uppercase;
+}
+
+.consultation__logo-descriptionspan {
+  color: #000000;
+}
+
+.footer {
+  background-color: #111517;
+}
+
+.footer__title {
+  font-family: "Montserrat500";
+  font-size: 11px;
+  color: rgba(253, 254, 254, 0.42);
+  line-height: 3.409;
+  text-align: center;
+  padding: 16px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 688px;
@@ -1593,6 +1991,243 @@ input[type="radio"].visually-hidden {
 
   .guaranty__list-item {
     width: 100%;
+  }
+
+  .container {
+    width: 720px;
+  }
+
+  .reviews-title {
+    font-size: 26px;
+    font-family: "Montserrat700";
+    line-height: 2.405;
+  }
+
+  .reviews-title-id {
+    display: none;
+  }
+
+  .reviews-wrap {
+    display: flex;
+    position: relative;
+  }
+
+  .reviews__card-student {
+    width: 688px;
+    padding: 0;
+    margin-bottom: 153px;
+  }
+
+  .reviews__card-student-photo {
+    padding: 62px 0 14px;
+  }
+
+  .reviews__card-student-profile {
+    width: 160px;
+  }
+
+  .reviews__card-student-social {
+    width: 160px;
+    margin-bottom: 40px;
+  }
+
+  .reviews__card-student-name {
+    font-size: 18px;
+    font-family: "Montserrat800";
+    line-height: 1.62;
+    letter-spacing: 0.8px;
+    padding-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .reviews__card-student-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 460px;
+    align-items: flex-start;
+  }
+
+  .reviews__card-student-learned {
+    font-size: 13px;
+    line-height: 1.333;
+    text-align: left;
+    width: 434px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .reviews__card-student-message {
+    font-size: 12px;
+    width: 465px;
+    text-align: left;
+    padding-bottom: 43px;
+  }
+
+  .reviews__card-student-message-continuation {
+    display: initial;
+  }
+
+  .reviews__card-student-message-continuation {
+    direction: initial;
+  }
+
+  .arrows {
+    width: 704px;
+    position: absolute;
+    bottom: 60px;
+    left: -9px;
+  }
+
+  .left-arrows-reviews {
+    width: 20px;
+  }
+
+  .left-arrows-reviews::after {
+    top: -3px;
+    border-width: 4px 0 4px 10px;
+  }
+
+  .right-arrows-reviews {
+    width: 20px;
+  }
+
+  .right-arrows-reviews::after {
+    top: -3px;
+    border-width: 4px 10px 4px 0;
+  }
+
+  .reviews__cards-title {
+    width: 505px;
+    bottom: -78px;
+    right: 102px;
+  }
+
+  .reviews__cards-title-list-student:nth-child(n + 4) {
+    display: initial;
+  }
+
+  .container {
+    width: 688px;
+  }
+
+  .registration {
+    background-image: url(../images/bg_registration_tablet.png);
+  }
+
+  .registration__title {
+    font-size: 22px;
+    font-family: "Montserrat800";
+    line-height: 1.729;
+    width: 545px;
+    padding-top: 58px;
+    margin-bottom: 24px;
+  }
+
+  .registration__description {
+    font-size: 15px;
+    line-height: 1.333;
+    text-align: left;
+    width: 455px;
+    margin-bottom: 29px;
+  }
+
+  .registration__description-aline {
+    display: block;
+    color: #ffffff;
+  }
+
+  .wrap_form {
+    padding-bottom: 64px;
+  }
+
+  .registration__form {
+    width: 400px;
+  }
+
+  .registration__form-name,
+  .registration__form-tel {
+    width: 400px;
+  }
+
+  .registration__form-tel {
+    margin-bottom: 35px;
+  }
+
+  .consultation .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .consultation {
+    margin-bottom: 30px;
+    padding-top: 32px;
+  }
+
+  .logo-link {
+    display: inline-flex;
+  }
+
+  .consultation__phone {
+    margin-left: 80px;
+  }
+
+  .consultation__phonea {
+    font-size: 20px;
+    line-height: 1.875;
+  }
+
+  .consultation__instagram {
+    order: -1;
+    margin: 0 0 0 30px;
+    padding: 0 0 0 30px;
+    border-left: 1px solid #e0e0e0;
+  }
+
+  .consultation__logo {
+    font-size: 25px;
+    width: 128px;
+  }
+
+  .consultation__logo-fire {
+    width: 22px;
+    height: 38px;
+    margin-left: -4px;
+  }
+
+  .consultation__logo-fire-mob,
+  .consultation__logo-fire-desktop {
+    display: none;
+  }
+
+  .consultation__logo-fire-tablet {
+    display: initial;
+  }
+
+  .consultation__logo-en {
+    font-size: 25px;
+  }
+
+  .consultation__logo-description {
+    font-size: 8.75px;
+  }
+
+  .container {
+    width: 688px;
+  }
+
+  .footer__title {
+    text-align: left;
+    padding: 17px 0 17px 9px;
+  }
+}
+
+@media (min-width: 768px) and (device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+  .registration {
+    background-image: url(../images/bg_registration_tablet@2x.png);
   }
 }
 
@@ -2052,5 +2687,173 @@ input[type="radio"].visually-hidden {
 
   .guaranty__list-item span {
     display: inline-block;
+  }
+
+  .container {
+    width: 1210px;
+  }
+
+  .reviews-title {
+    font-size: 42px;
+    line-height: 1.489;
+  }
+
+  .reviews__card-student {
+    width: 1065px;
+    margin-bottom: 192px;
+  }
+
+  .reviews__card-student-photo {
+    display: none;
+  }
+
+  .reviews__card-student-photo-desktop {
+    display: initial;
+    width: 145px;
+    margin-bottom: 20px;
+  }
+
+  .reviews__card-student-profile {
+    width: 145px;
+    padding-top: 47px;
+    margin: 0 34px 0 86px;
+  }
+
+  .reviews__card-student-social {
+    width: 145px;
+    margin-bottom: 100px;
+  }
+
+  .reviews__card-student-name {
+    font-size: 25px;
+    line-height: 1.167;
+    padding-top: 41px;
+    margin-bottom: 0;
+  }
+
+  .reviews__card-student-learned {
+    font-size: 12.5px;
+  }
+
+  .reviews__card-student-message {
+    font-size: 16.667px;
+    line-height: 1.75;
+    width: 700px;
+    padding-bottom: 38px;
+  }
+
+  .arrows {
+    width: 1180px;
+    bottom: 92px;
+    left: 16px;
+  }
+
+  .left-arrows-reviews {
+    width: 25px;
+  }
+
+  .left-arrows-reviews::after {
+    top: -4px;
+    border-width: 5px 0 5px 10px;
+  }
+
+  .right-arrows-reviews {
+    width: 25px;
+  }
+
+  .right-arrows-reviews::after {
+    top: -4px;
+    right: 20px;
+    border-width: 5px 10px 5px 0;
+  }
+
+  .reviews__cards-title {
+    width: 594px;
+    bottom: -94px;
+    right: 308px;
+  }
+
+  .container {
+    width: 1210px;
+  }
+
+  .registration {
+    background-image: url(../images/bg_registration_desktop.png);
+  }
+
+  .registration__title {
+    font-size: 37.5px;
+    line-height: 1.334;
+    width: 930px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  .registration__description {
+    font-size: 18px;
+    line-height: 1.361;
+    text-align: center;
+    width: 540px;
+    margin-bottom: 40px;
+  }
+
+  .wrap_form {
+    padding-bottom: 88px;
+  }
+
+  .registration__form {
+    width: 620px;
+  }
+
+  .registration__form-name,
+  .registration__form-tel {
+    font-size: 21px;
+    line-height: 1.8;
+    letter-spacing: 1.05px;
+    border: 1px solid #ffffff;
+    width: 620px;
+    height: 72px;
+    margin-bottom: 20px;
+    padding-left: 28px;
+  }
+
+  .registration__form-btn {
+    width: 350px;
+    font-size: 14px;
+    line-height: 4.9;
+  }
+
+  .registration__form-tel {
+    margin-bottom: 56px;
+  }
+
+  .consultation__phone {
+    margin-left: 272px;
+  }
+
+  .consultation__phonea {
+    font-size: 27px;
+    line-height: 1.385;
+  }
+
+  .container {
+    width: 1210px;
+  }
+
+  .footer__title {
+    font-size: 14px;
+    line-height: 2.571;
+  }
+}
+
+@media (min-width: 1280px) and (device-pixel-ratio: 2), (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (min-resolution: 192dpi) {
+  .registration {
+    background-image: url(../images/bg_registration_desktop@2x.png);
+  }
+}
+
+@media (device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .registration {
+    background-image: url(../images/bg_registration@2x.png);
   }
 }
