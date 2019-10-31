@@ -29,18 +29,18 @@ ul {
 }
 
 .container {
-    min-width: 320px; /*280px*/
+    width: 280px; /*280px*/
     margin: 0 auto;
    }
   
   @media (min-width: 768px) {
     .container {  
-      min-width: 720px; /*688px*/
+      width: 688px; /*688px*/
     }
   }
     
-  @media (min-width: 1200px) {
+  @media (min-width: 1280px) {
       .container {
-        min-width: 1145px; /*1210*/
+        width: 1210px; /*1210*/
       }
     }
