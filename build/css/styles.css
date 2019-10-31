@@ -456,7 +456,6 @@ ul {
 .program__list-item-term::before,
 .program__list-item-list-description-class::before,
 .program__list::before,
-.advantages__list-item-number::before,
 .teacher__name::after,
 .teacher__skills-list-item::before,
 .teacher__description-list-item--one::before,
@@ -475,13 +474,13 @@ ul {
   font-size: 20px;
   font-family: "Montserrat800";
   line-height: 33px;
-  text-align: center;
   letter-spacing: 1px;
 }
 
 .section-title--program {
   color: #ffffff;
   margin-bottom: 34px;
+  text-align: center;
 }
 
 .program {
@@ -594,6 +593,7 @@ ul {
 }
 
 .advantages__list {
+  counter-reset: issues 0;
   background-color: #ffffff;
   box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
   padding: 20px 28px 24px 28px;
@@ -601,6 +601,7 @@ ul {
 
 .advantages__list-item {
   width: 220px;
+  position: relative;
 }
 
 .advantages__list-item:nth-of-type(-n+5) {
@@ -615,24 +616,26 @@ ul {
   letter-spacing: 0.65px;
 }
 
-.advantages__list-item-number {
-  font-size: 14px;
-  line-height: 29px;
-  font-family: "Montserrat500";
+.advantages__list-item::before {
+  counter-increment: issues 1;
+  content: "" counter(issues, decimal-leading-zero);
+  display: block;
+  padding-left: 36px;
   color: #ff6b08;
-  text-align: left;
-  padding-left: 34px;
-  letter-spacing: 0.7px;
-  position: relative;
+  font-family: 'Montserrat400';
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
-.advantages__list-item-number::before {
-  background-color: #ff6b08;
-  width: 26px;
+.advantages__list-item::after {
+  content: '';
+  display: block;
+  width: 25px;
   height: 2px;
+  background-color: #ff6b08;
   position: absolute;
+  top: 6px;
   left: 0;
-  top: 14px;
 }
 
 .section-title--teacher {
@@ -1063,15 +1066,19 @@ ul {
     width: 305px;
   }
 
-  .advantages__list-item-number {
-    font-size: 21px;
-    letter-spacing: 1px;
-  }
-
   .advantages__list-item-text {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.9px;
+  }
+
+  .advantages__list-item::before {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+
+  .advantages__list-item::after {
+    top: 10px;
   }
 
   .advantages__list-item:nth-of-type(-n+4) {

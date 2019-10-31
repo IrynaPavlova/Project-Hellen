@@ -7,12 +7,12 @@
     font-size: 20px;
     font-family: $norm800;
     line-height: 33px;
-    text-align: center;
     letter-spacing: 1px;
 
     &--program {
         color: $primary-light-color;
         margin-bottom: 34px;
+        text-align: center;
     }
 }
 

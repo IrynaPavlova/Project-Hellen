@@ -14,12 +14,14 @@
     position: relative;
 
     &__list {
+        counter-reset: issues 0;
         background-color: $primary-light-color;
         box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
         padding: 20px 28px 24px 28px;
 
         &-item {
             width: 220px;
+            position: relative;
 
             &:nth-of-type(-n+5) {
                 margin-bottom: 10px;
@@ -31,31 +33,35 @@
                 color: $primary-dark-color;
                 line-height: 20px;
                 letter-spacing: 0.65px;
+
+                
             }
 
-            &-number {
+            &::before {
+                counter-increment: issues 1;
+                content: ''counter(issues, decimal-leading-zero);
+                display: block;
+                padding-left: 36px;
+                color: #ff6b08;
+                font-family: 'Montserrat400';
                 font-size: 14px;
-                line-height: 29px;
-                font-family: $norm500;
-                color: $main-orange-color;
-                text-align: left;
-                padding-left: 34px;
-                letter-spacing: 0.7px;
-                position: relative;
-
-                &::before {
-                    @extend %pseudo;
-                    background-color: $main-orange-color;
-                    width: 26px;
-                    height: 2px;
-                    position: absolute;
-                    left: 0;
-                    top: 14px;
-                }   
+                margin-bottom: 6px;
+            }
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: #ff6b08;
+                position: absolute;
+                top: 6px;
+                left: 0;
             }
         }
     }
 }
+  
 
 
 @media (min-width: 768px) {
@@ -128,15 +134,19 @@
         &-item {
             width: 305px;
 
-            &-number {
-                font-size: 21px;
-                letter-spacing: 1px;
-            }
-
             &-text {
                 font-size: 18px;
                 line-height: 29px;
                 letter-spacing: 0.9px;
+            }
+
+            &::before {
+                font-size: 21px;
+                letter-spacing: 1px;
+            }
+
+            &::after {
+                top: 10px;
             }
 
             &:nth-of-type(-n+4) {
