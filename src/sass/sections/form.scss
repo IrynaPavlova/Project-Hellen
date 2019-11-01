@@ -75,7 +75,7 @@
     font-size: 12px;
     line-height: 4.2;
     letter-spacing: 0.9px;
-    font-family: $btn;
+    font-family: $btn, sans-serif;
     text-transform: uppercase;
     color: $primary-light-color;
     background-color: $main-orange-color;
@@ -169,7 +169,7 @@
     color: $main-orange-color;
     text-transform: uppercase;
 
-    &span {
+    & span {
       color: $logo-dark-color;
     }
   }

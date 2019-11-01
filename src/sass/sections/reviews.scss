@@ -184,6 +184,10 @@
   }
 }
 
+.reviews__cards-title-list-student:nth-child(n + 4) {
+  display: none
+}
+
 @media (min-width: 768px) {
   .container {
     width: 720px;

@@ -414,7 +414,7 @@ template {
   font-family: 'Tahoma';
   font-style: normal;
   font-weight: 700;
-  src: local(""), local(""), url("../../fonts/Tahoma-Bold.woff2") format("woff2"), url("../../fonts/Tahoma-Bold.woff") format("woff");
+  src: local(""), local(""), url("../fonts/Tahoma-Bold.woff2") format("woff2"), url("../fonts/Tahoma-Bold.woff") format("woff");
 }
 
 html {
@@ -513,12 +513,12 @@ input[type="radio"].visually-hidden {
   z-index: 100;
   top: 0;
   left: 0;
-  transition: all .5s linear;
+  transition: all .4s linear;
 }
 
 .overlay * {
   opacity: 0;
-  transition: all .5s linear .8s;
+  transition: all .1s linear .5s;
 }
 
 .overlay_active {
@@ -578,6 +578,75 @@ input[type="radio"].visually-hidden {
   color: #ff6b08;
 }
 
+.animation {
+  -webkit-animation: animation 0.9s linear;
+  animation: animation 0.9s linear;
+}
+
+@-webkit-keyframes animation {
+  from {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes animation {
+  from {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
 .header {
   padding: 30px 0 0;
   margin-bottom: 56px;
@@ -606,15 +675,24 @@ input[type="radio"].visually-hidden {
 .header-section__btn {
   display: block;
   margin: 0 auto;
-  font-family: "Montserrat600";
+  font-family: "Tahoma", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: 4.2;
+  letter-spacing: 0.9px;
   width: 250px;
   height: 48px;
   border: none;
   background-color: #ff6b08;
   position: relative;
+  cursor: pointer;
+}
+
+.header-section__btn:hover,
+.header-section__btn:focus {
+  background-color: #d35526;
+  transition: all 0.2s linear;
 }
 
 .header-section__description {
@@ -1372,6 +1450,10 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.reviews__cards-title-list-student:nth-child(n + 4) {
+  display: none;
+}
+
 .registration {
   background-image: url(../images/bg_registration.png);
   opacity: 0.9;
@@ -1468,7 +1550,7 @@ input[type="radio"].visually-hidden {
   font-size: 12px;
   line-height: 4.2;
   letter-spacing: 0.9px;
-  font-family: "Tahoma";
+  font-family: "Tahoma", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ff6b08;
@@ -1561,7 +1643,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.consultation__logo-descriptionspan {
+.consultation__logo-description span {
   color: #000000;
 }
 
@@ -1610,10 +1692,17 @@ input[type="radio"].visually-hidden {
     margin-right: 30px;
     background-color: transparent;
     border: 2px solid #ff6b08;
-    font-family: "Montserrat500";
+    font-family: "Tahoma", sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     color: #ff6b08;
+  }
+
+  .header__btn-tel:hover,
+  .header__btn-tel:focus {
+    background-color: #ff6b08;
+    transition: all 0.2s linear;
+    color: #ffffff;
   }
 
   .header-section {
@@ -2239,7 +2328,7 @@ input[type="radio"].visually-hidden {
   }
 
   .umbrella::before {
-    background-image: url(../../images/umbrella2.png);
+    background-image: url(../images/umbrella2.png);
     width: 208px;
     height: 104px;
     top: -27px;

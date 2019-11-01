@@ -31,12 +31,12 @@ input[type="radio"].visually-hidden {
     z-index: 100;
     top: 0;
     left: 0;
-    transition: all .5s linear;
+    transition: all .4s linear;
 }
 
 .overlay * {
     opacity: 0;
-    transition: all .5s linear .8s;
+    transition: all .1s linear .5s;
 }
 
 .overlay_active {
@@ -92,6 +92,50 @@ input[type="radio"].visually-hidden {
         color: $main-orange-color;
     }
 }
+.animation {
+    animation: animation 0.9s linear;
+}
+
+@keyframes animation {
+    from {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, -360deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    40% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    50% {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    80% {
+      -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    to {
+      -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  }
 
 .header {
     padding: 30px 0 0;
@@ -119,15 +163,24 @@ input[type="radio"].visually-hidden {
         &__btn {
             display: block;
             margin: 0 auto;
-            font-family: $norm600;
+            font-family: $btn, sans-serif;
             font-size: 12px;
             text-transform: uppercase;
             color: $primary-light-color;
+            line-height: 4.2;
+            letter-spacing: 0.9px;
             width: 250px;
             height: 48px;
             border: none;
             background-color: $main-orange-color;
             position: relative;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              background-color: $main-orange-hover;
+              transition: all 0.2s linear;
+            }
         }
 
         &__description {
@@ -246,10 +299,17 @@ input[type="radio"].visually-hidden {
             margin-right: 30px;
             background-color: transparent;
             border: 2px solid $main-orange-color;
-            font-family: $norm500;
+            font-family: $btn, sans-serif;
             font-size: 11px;
             text-transform: uppercase;
             color: $main-orange-color;
+
+            &:hover,
+            &:focus {
+              background-color: $main-orange-color;
+              transition: all 0.2s linear;
+              color: #ffffff;
+            }
         }
 
         &-section {
